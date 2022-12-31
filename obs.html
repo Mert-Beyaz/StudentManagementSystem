@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="obs.css">
+    <script src="obs.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <img src="Book.png" alt="Book" />
+        <h1>Student Information System</h1>
+        <img src="Human.png" alt="Human" />
+    </header>
+    <div class="body">
+        <sidebar>
+            <button type="submit" class="sidebarBtn" id="addLessonSidebarBtn">ADD LESSON</button>
+            <button type="submit" class="sidebarBtn" id="addStudentSidebarBtn">ADD STUDENT</button>
+            <button type="submit" class="sidebarBtn" id="studentsOfLessonSidebarBtn">STUDENTS OF LESSON</button>
+            <button type="submit" class="sidebarBtn" id="showAllStudentsSidebarBtn">SHOW ALL STUDENTS</button>
+            <button type="submit" class="sidebarBtn" id="searchStudentSidebarBtn">SEARCH STUDENTS</button>
+        </sidebar>
+        <middle>
+            <div class="allOptions" id="addStudentSidebarBtnDiv">
+                <form>
+                    <label for="studentID">Student ID:</label>
+                    <input type="number" id="studentID">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name">
+                    <label for="surname">Surname:</label>
+                    <input type="text" id="surname">
+                    <label for="lesson">Lesson:</label>
+                    <select name="Lesson" id="lesson">
+                        <option value="" id="generalOption">Select Lesson</option>
+                    </select>
+                    <label for="midterm">Midterm(0-100):</label>
+                    <input type="number" id="midterm" min="0" max="100">
+                    <label for="final">Final(0-100):</label>
+                    <input type="number" id="final" min="0" max="100">
+                    <button type="submit" class="tableBtn" id="addStudentSubBtn">Add Student</button>
+                </form>
+                <table id="addStudentTable">
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Surame</th>
+                        <th>Lesson</th>
+                        <th>Midterm</th>
+                        <th>Final</th>
+                        <th>Letter Grade</th>
+                        <th>Edit Button</th>
+                        <th>Delete Button</th>
+                    </tr>
+                </table>
+                <button type="submit" class="tableBtn" id="saveStudentBtn">SAVE</button>
+            </div>
+            <div class="allOptions" id="addLessonSidebarBtnDiv">
+                <form>
+                    <label for="lessonID">Lesson ID:</label>
+                    <input type="text" id="lessonID">
+                    <label for="lessonName">Lesson Name:</label>
+                    <input type="text" id="lessonName">
+                    <label for="pointScale">Point Scale:</label>
+                    <select name="pointScale" id="pointScale">
+                        <option value="" id="generalOption">Select Point Scale</option>
+                        <option value="7">7 Point Scale</option>
+                        <option value="10">10 Point Scale</option>
+                    </select>
+                    <button type="submit" class="tableBtn" id="addLessonSubBtn">Add Lesson</button>
+                </form>
+                <table id="addLessonTable">
+                    <tr>
+                        <th>Lesson ID</th>
+                        <th>Lesson Name</th>
+                        <th>Point Scale</th>
+                        <th>Edit Button</th>
+                        <th>Delete Button</th>
+                    </tr>
+                </table>
+                <button type="submit" class="tableBtn" id="saveLessonBtn">SAVE</button>
+            </div>
+            <div class="allOptions" id="studentOfLessonSidebarBtnDiv">
+                <form>
+                    <select name="searchLesson" id="searchLesson">
+                        <option value="" id="generalOption">Select Lesson</option>
+                    </select>
+                    <select name="rating" id="rating">
+                        <option value="" id="generalOption">Select Rating</option>
+                        <option value="Passed">Passed</option>
+                        <option value="Failed">Failed</option>
+                        <option value="AllStudent">All Students</option>
+                    </select>
+                    <button type="submit" class="tableBtn" id="studentOfLessonSubBtn">Search</button>
+                </form>
+                <table id="studentsOfLessonTable">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Lesson</th>
+                        <th>Midterm</th>
+                        <th>Final</th>
+                        <th>Letter Grade</th>
+                        <th>Edit Button</th>
+                        <th>Delete Button</th>
+                    </tr>
+                </table>
+                <button type="submit" class="tableBtn" id="saveStudentOfLessonBtn">SAVE</button>
+            </div>
+            <div class="allOptions" id="showAllStudentSidebarBtnDiv">
+                <table id="showAllStudenstsTable">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>GPA</th>
+                        <th>Edit Button</th>
+                        <th>Delete Student Button</th>
+                    </tr>
+                </table>
+                <button type="submit" class="tableBtn" id="saveAllStudentsBtn">SAVE</button>
+            </div>
+            <div class="allOptions" id="searchStudentsidebarBtnDiv">
+                <label for="searchByID">Search Student By ID:</label>
+                <input type="number" id="searchStudentByID">
+                <button type="submit" class="tableBtn" id="searchStudentSubBtn">Search</button>
+                <table id="searchStudentTable">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Lesson</th>
+                        <th>Midterm</th>
+                        <th>Final</th>
+                        <th>Letter Grade</th>
+                        <th>Edit Button</th>
+                        <th>Delete Button</th>
+                    </tr>
+                </table>
+                <button type="submit" class="tableBtn" id="saveSearchStudentBtn">SAVE</button>
+            </div>
+        </middle>
+    </div>
+    <footer>
+        <a href="https://obs.mu.edu.tr/">@Obs.mu.edu.tr</a>
+    </footer>
+</body>
+
+</html>
